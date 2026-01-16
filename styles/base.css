@@ -1,8 +1,5 @@
-/* Import Google Fonts - Example: Roboto */
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
-
 :root {
-    /* Define your color palette */
+
     --primary-color: #2c3e50;
     --secondary-color: #e74c3c;
     --background-color: #ecf0f1;
@@ -19,7 +16,6 @@ body {
     line-height: 1.5;
 }
 
-/* Header Styles */
 header {
     background-color: var(--primary-color);
     color: var(--white);
@@ -28,13 +24,13 @@ header {
 }
 
 #course-title {
-    display: block; /* Requirement: display block to center */
+    display: block; 
     font-size: 1.5rem;
     font-weight: bold;
     margin-bottom: 1rem;
 }
 
-/* Navigation Styles - Requirement: Flexbox */
+
 nav {
     display: flex;
     justify-content: center;
@@ -50,16 +46,14 @@ nav a {
     transition: background-color 0.3s ease;
 }
 
-/* Requirement: Hover effect */
 nav a:hover {
     background-color: var(--secondary-color);
     color: var(--white);
 }
 
-/* Main Content Styles */
 main {
-    max-width: 900px; /* Requirement: Limited width */
-    margin: 2rem auto; /* Requirement: Centered horizontally */
+    max-width: 900px; 
+    margin: 2rem auto; 
     padding: 0 1rem;
 }
 
@@ -71,7 +65,6 @@ h1 {
     padding-bottom: 0.5rem;
 }
 
-/* Grid Layout for Cards - Requirement: CSS Grid */
 .card-container {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -100,7 +93,6 @@ h1 {
     box-shadow: 0 2px 4px rgba(0,0,0,0.1);
 }
 
-/* Footer Styles */
 footer {
     background-color: var(--primary-color);
     color: var(--white);
@@ -114,6 +106,6 @@ footer p {
 }
 
 #lastModified {
-    color: #bdc3c7; /* Lighter text for the date */
+    color: #bdc3c7; 
     font-size: 0.9rem;
 }
