@@ -1,0 +1,119 @@
+/* Import Google Fonts - Example: Roboto */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+:root {
+    /* Define your color palette */
+    --primary-color: #2c3e50;
+    --secondary-color: #e74c3c;
+    --background-color: #ecf0f1;
+    --text-color: #333;
+    --white: #ffffff;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    line-height: 1.5;
+}
+
+/* Header Styles */
+header {
+    background-color: var(--primary-color);
+    color: var(--white);
+    padding: 1rem;
+    text-align: center;
+}
+
+#course-title {
+    display: block; /* Requirement: display block to center */
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
+
+/* Navigation Styles - Requirement: Flexbox */
+nav {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+nav a {
+    color: var(--white);
+    text-decoration: none;
+    font-weight: bold;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+/* Requirement: Hover effect */
+nav a:hover {
+    background-color: var(--secondary-color);
+    color: var(--white);
+}
+
+/* Main Content Styles */
+main {
+    max-width: 900px; /* Requirement: Limited width */
+    margin: 2rem auto; /* Requirement: Centered horizontally */
+    padding: 0 1rem;
+}
+
+h1 {
+    text-align: center;
+    color: var(--primary-color);
+    margin-bottom: 2rem;
+    border-bottom: 2px solid var(--secondary-color);
+    padding-bottom: 0.5rem;
+}
+
+/* Grid Layout for Cards - Requirement: CSS Grid */
+.card-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.card {
+    background-color: var(--white);
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 1.5rem;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.card h2 {
+    color: var(--primary-color);
+    border-bottom: 1px solid #eee;
+    padding-bottom: 0.5rem;
+}
+
+.card img {
+    width: 100%;
+    height: auto;
+    border-radius: 4px;
+    margin: 1rem 0;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+/* Footer Styles */
+footer {
+    background-color: var(--primary-color);
+    color: var(--white);
+    text-align: center;
+    padding: 1rem;
+    margin-top: 2rem;
+}
+
+footer p {
+    margin: 0.5rem 0;
+}
+
+#lastModified {
+    color: #bdc3c7; /* Lighter text for the date */
+    font-size: 0.9rem;
+}
