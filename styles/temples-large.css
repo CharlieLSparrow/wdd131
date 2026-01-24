@@ -1,16 +1,15 @@
-
 #menu {
     display: none;
 }
 
 nav {
-    display: block; 
+    display: block;
     flex: 1;
 }
 
 .navigation {
-    display: flex; 
-    justify-content: flex-end; 
+    display: flex;
+    justify-content: flex-end;
 }
 
 .navigation li {

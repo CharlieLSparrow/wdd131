@@ -3,56 +3,68 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>United States - WDD 131</title>
-    <meta name="description" content="WDD 131 - Country Page Assignment">
-    <meta name="author" content="Charlie Sparrow">
+    <title>Iceland - Land of Fire and Ice</title>
+    <meta name="description" content="Iceland Country Page">
+    <meta name="author" content="Your Name">
     <link rel="stylesheet" href="styles/place.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Playfair+Display:ital@0;1&display=swap" rel="stylesheet">
     <script src="scripts/place.js" defer></script>
 </head>
 <body>
     <header>
-        <h1>United States</h1>
+        <h1>Iceland</h1>
     </header>
-
     <main>
         <div class="hero">
             <picture>
-                <source media="(min-width: 1024px)" srcset="images/hero-large.webp">
-                <source media="(min-width: 500px)" srcset="images/hero-medium.webp">
-                <img src="images/hero-small.webp" alt="Landscape of Country" width="400" height="200">
+                <source media="(min-width: 1024px)" srcset="images/iceland-hero-large.webp">
+                <source media="(min-width: 500px)" srcset="images/iceland-hero-medium.webp">
+                <img src="images/iceland-hero-small.webp" alt="Iceland Landscape" width="400" height="250" loading="lazy">
             </picture>
-            <div class="data-overlay">
-                </div>
+            <div class="overlay-text">Land of Fire and Ice</div>
         </div>
-
-        <section class="data-section">
-            <h2>Data</h2>
+        <section class="info-card data-section">
+            <h2>Quick Facts</h2>
             <ul>
-                <li><strong>Area:</strong> 100,000 sq km</li>
-                <li><strong>Population:</strong> 5,000,000</li>
-                <li><strong>Capital:</strong> Capital City</li>
-                <li><strong>Languages:</strong> Language 1, Language 2</li>
-                <li><strong>Currency:</strong> Currency Name</li>
-                <li><strong>Time Zone:</strong> UTC+1</li>
-                <li><strong>Calling Code:</strong> +00</li>
-                <li><strong>Internet TLD:</strong> .co</li>
+                <li><span class="label">Capital:</span> Reykjavik</li>
+                <li><span class="label">Population:</span> ~376,000</li>
+                <li><span class="label">Area:</span> 103,000 km²</li>
+                <li><span class="label">Language:</span> Icelandic</li>
+                <li><span class="label">Currency:</span> Icelandic Króna</li>
+                <li><span class="label">Time Zone:</span> UTC+0</li>
+                <li><span class="label">Calling Code:</span> +354</li>
+                <li><span class="label">Internet TLD:</span> .is</li>
             </ul>
         </section>
-
-        <section class="weather-section">
-            <h2>Weather</h2>
-            <div class="weather-icon">
-                <img src="images/weather_icon.svg" alt="Sunny">
+        <section class="info-card weather-section">
+            <h2>Weather Conditions</h2>
+            <div class="weather-icon-container">
+                <img src="images/weather-icon.svg" alt="Weather Icon" class="weather-icon">
             </div>
-            <p><strong>Temperature:</strong> <span id="temp">10</span>°C</p>
-            <p><strong>Conditions:</strong> Partly Cloudy</p>
-            <p><strong>Wind:</strong> <span id="wind">5</span> km/h</p>
-            <p><strong>Wind Chill:</strong> <span id="chill">N/A</span></p>
+            <div class="weather-grid">
+                <div class="weather-item">
+                    <span class="label">Temperature</span>
+                    <span class="value"><span id="temp">4</span>°C</span>
+                </div>
+                <div class="weather-item">
+                    <span class="label">Wind Speed</span>
+                    <span class="value"><span id="wind">15</span> km/h</span>
+                </div>
+                <div class="weather-item">
+                    <span class="label">Condition</span>
+                    <span class="value">Overcast</span>
+                </div>
+                <div class="weather-item highlight">
+                    <span class="label">Wind Chill</span>
+                    <span class="value" id="chill">N/A</span>
+                </div>
+            </div>
         </section>
     </main>
-
     <footer>
-        <p>&copy; <span id="currentyear"></span> | Your Name | Country Page</p>
+        <p>&copy; <span id="currentyear"></span> | Your Name | WDD 131</p>
         <p id="lastModified"></p>
     </footer>
 </body>

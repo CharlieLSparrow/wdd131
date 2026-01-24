@@ -3,56 +3,73 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Country Name - WDD 131</title>
-    <meta name="description" content="WDD 131 - Country Page Assignment">
-    <meta name="author" content="Your Name">
-    <link rel="stylesheet" href="styles/place.css">
-    <script src="scripts/place.js" defer></script>
+    <title>Temple Album - Charlie Sparrow</title>
+    <meta name="description" content="Temple Album Assignment for WDD 131">
+    <meta name="author" content="Charlie Sparrow">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/temples.css">
+    <link rel="stylesheet" href="styles/temples-large.css" media="(min-width: 640px)">
+    <script src="scripts/temples.js" defer></script>
 </head>
 <body>
     <header>
-        <h1>Country Name</h1>
-    </header>
-
-    <main>
-        <div class="hero">
-            <picture>
-                <source media="(min-width: 1024px)" srcset="images/hero-large.webp">
-                <source media="(min-width: 500px)" srcset="images/hero-medium.webp">
-                <img src="images/hero-small.webp" alt="Landscape of Country" width="400" height="200">
-            </picture>
-            <div class="data-overlay">
-                </div>
-        </div>
-
-        <section class="data-section">
-            <h2>Data</h2>
-            <ul>
-                <li><strong>Area:</strong> 100,000 sq km</li>
-                <li><strong>Population:</strong> 5,000,000</li>
-                <li><strong>Capital:</strong> Capital City</li>
-                <li><strong>Languages:</strong> Language 1, Language 2</li>
-                <li><strong>Currency:</strong> Currency Name</li>
-                <li><strong>Time Zone:</strong> UTC+1</li>
-                <li><strong>Calling Code:</strong> +00</li>
-                <li><strong>Internet TLD:</strong> .co</li>
+        <h1>Temple Album</h1>
+        <a id="menu" href="#"></a>
+        <nav>
+            <ul class="navigation">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Old</a></li>
+                <li><a href="#">New</a></li>
+                <li><a href="#">Large</a></li>
+                <li><a href="#">Small</a></li>
             </ul>
-        </section>
-
-        <section class="weather-section">
-            <h2>Weather</h2>
-            <div class="weather-icon">
-                <img src="images/weather_icon.svg" alt="Sunny">
-            </div>
-            <p><strong>Temperature:</strong> <span id="temp">10</span>°C</p>
-            <p><strong>Conditions:</strong> Partly Cloudy</p>
-            <p><strong>Wind:</strong> <span id="wind">5</span> km/h</p>
-            <p><strong>Wind Chill:</strong> <span id="chill">N/A</span></p>
-        </section>
+        </nav>
+    </header>
+    <main>
+        <h2>Home of the Lord</h2>
+        <div class="gallery">
+            <figure>
+                <img src="https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/salt-lake-city-utah/400x250/salt-lake-temple-37762.jpg" alt="Salt Lake Temple" width="400" height="250" loading="lazy">
+                <figcaption>Salt Lake Temple</figcaption>
+            </figure>
+            <figure>
+                <img src="https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/rome-italy/2019/400x250/1-Rome-Temple-2160936.jpg" alt="Rome Italy Temple" width="400" height="250" loading="lazy">
+                <figcaption>Rome Italy Temple</figcaption>
+            </figure>
+            <figure>
+                <img src="https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/provo-city-center/400x250/provo-city-center-temple-1572517.jpg" alt="Provo City Center Temple" width="400" height="250" loading="lazy">
+                <figcaption>Provo City Center Temple</figcaption>
+            </figure>
+            <figure>
+                <img src="https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/paris-france/400x250/paris-france-temple-exterior-1905503.jpg" alt="Paris France Temple" width="400" height="250" loading="lazy">
+                <figcaption>Paris France Temple</figcaption>
+            </figure>
+            <figure>
+                <img src="https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/tokyo-japan/400x250/tokyo_japan_temple-main.jpeg" alt="Tokyo Japan Temple" width="400" height="250" loading="lazy">
+                <figcaption>Tokyo Japan Temple</figcaption>
+            </figure>
+            <figure>
+                <img src="https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/washington-dc/400x250/washington_dc_temple-exterior-2.jpeg" alt="Washington D.C. Temple" width="400" height="250" loading="lazy">
+                <figcaption>Washington D.C. Temple</figcaption>
+            </figure>
+            <figure>
+                <img src="https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/mexico-city-mexico/400x250/mexico-city-temple-exterior-1518361.jpg" alt="Mexico City Temple" width="400" height="250" loading="lazy">
+                <figcaption>Mexico City Temple</figcaption>
+            </figure>
+            <figure>
+                <img src="https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/barranquilla-colombia/400x250/2-Barranquilla-Columblia-Temple-2135201.jpg" alt="Barranquilla Colombia Temple" width="400" height="250" loading="lazy">
+                <figcaption>Barranquilla Colombia Temple</figcaption>
+            </figure>
+            <figure>
+                <img src="https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/kyiv-ukraine/400x250/kyiv-ukraine-temple-1085350.jpg" alt="Kyiv Ukraine Temple" width="400" height="250" loading="lazy">
+                <figcaption>Kyiv Ukraine Temple</figcaption>
+            </figure>
+        </div>
     </main>
-
     <footer>
-        <p>&copy; <span id="currentyear"></span> | Your Name | Country Page</p>
+        <p>&copy; <span id="currentyear"></span> | Charlie Sparrow | Utah</p>
         <p id="lastModified"></p>
     </footer>
 </body>
