@@ -1,0 +1,22 @@
+
+#menu {
+    display: none;
+}
+
+nav {
+    display: block; 
+    flex: 1;
+}
+
+.navigation {
+    display: flex; 
+    justify-content: flex-end; 
+}
+
+.navigation li {
+    margin-left: 20px;
+}
+
+.gallery {
+    grid-template-columns: repeat(3, 1fr);
+}

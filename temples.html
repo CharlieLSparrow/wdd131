@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Country Name - WDD 131</title>
+    <meta name="description" content="WDD 131 - Country Page Assignment">
+    <meta name="author" content="Your Name">
+    <link rel="stylesheet" href="styles/place.css">
+    <script src="scripts/place.js" defer></script>
+</head>
+<body>
+    <header>
+        <h1>Country Name</h1>
+    </header>
+
+    <main>
+        <div class="hero">
+            <picture>
+                <source media="(min-width: 1024px)" srcset="images/hero-large.webp">
+                <source media="(min-width: 500px)" srcset="images/hero-medium.webp">
+                <img src="images/hero-small.webp" alt="Landscape of Country" width="400" height="200">
+            </picture>
+            <div class="data-overlay">
+                </div>
+        </div>
+
+        <section class="data-section">
+            <h2>Data</h2>
+            <ul>
+                <li><strong>Area:</strong> 100,000 sq km</li>
+                <li><strong>Population:</strong> 5,000,000</li>
+                <li><strong>Capital:</strong> Capital City</li>
+                <li><strong>Languages:</strong> Language 1, Language 2</li>
+                <li><strong>Currency:</strong> Currency Name</li>
+                <li><strong>Time Zone:</strong> UTC+1</li>
+                <li><strong>Calling Code:</strong> +00</li>
+                <li><strong>Internet TLD:</strong> .co</li>
+            </ul>
+        </section>
+
+        <section class="weather-section">
+            <h2>Weather</h2>
+            <div class="weather-icon">
+                <img src="images/weather_icon.svg" alt="Sunny">
+            </div>
+            <p><strong>Temperature:</strong> <span id="temp">10</span>°C</p>
+            <p><strong>Conditions:</strong> Partly Cloudy</p>
+            <p><strong>Wind:</strong> <span id="wind">5</span> km/h</p>
+            <p><strong>Wind Chill:</strong> <span id="chill">N/A</span></p>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; <span id="currentyear"></span> | Your Name | Country Page</p>
+        <p id="lastModified"></p>
+    </footer>
+</body>
+</html>
