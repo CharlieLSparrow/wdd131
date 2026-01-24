@@ -1,21 +1,26 @@
-#menu {
-    display: none;
-}
 
-nav {
-    display: block;
-    flex: 1;
-}
+@media (min-width: 640px) {
+    #menu {
+        display: none;
+    }
 
-.navigation {
-    display: flex;
-    justify-content: flex-end;
-}
+    nav {
+        display: flex; 
+        flex: 1;
+        justify-content: flex-end;
+    }
 
-.navigation li {
-    margin-left: 20px;
-}
+    .navigation {
+        display: flex; 
+        list-style: none;
+        margin: 0;
+    }
 
-.gallery {
-    grid-template-columns: repeat(3, 1fr);
+    .navigation li {
+        margin-left: 20px;
+    }
+
+    .gallery {
+        grid-template-columns: repeat(3, 1fr); 
+    }
 }
