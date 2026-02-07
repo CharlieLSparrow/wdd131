@@ -1,15 +1,6 @@
 "use strict";
 
-/**
- * W04 Enhanced Temple Picture Album
- * - Uses a temples array (7 provided + 3 added = 10 total)
- * - Dynamically creates "temple cards"
- * - Filters via the navigation menu items: Home, Old, New, Large, Small
- * - Sets footer year + last modified
- * - Includes hamburger toggle matching your existing project
- */
 
-// 7 provided + 3 added
 const temples = [
   {
     templeName: "Aba Nigeria",
@@ -68,34 +59,9 @@ const temples = [
       "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/mexico-city-mexico/400x250/mexico-city-temple-exterior-1518361-wallpaper.jpg",
   },
 
-  // --- Added 3 more ---
-  {
-    templeName: "Salt Lake Utah",
-    location: "Salt Lake City, Utah, United States",
-    dedicated: "1893, April, 6",
-    area: 382207,
-    imageUrl:
-      "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/salt-lake-temple/400x250/salt-lake-temple-761829-wallpaper.jpg",
-  },
-  {
-    templeName: "Rome Italy",
-    location: "Rome, Italy",
-    dedicated: "2019, March, 10",
-    area: 40000,
-    imageUrl:
-      "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/rome-italy/400x250/rome-temple-2190090-wallpaper.jpg",
-  },
-  {
-    templeName: "Laie Hawaii",
-    location: "Laie, Hawaii, United States",
-    dedicated: "1919, November, 27",
-    area: 42100,
-    imageUrl:
-      "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/laie-hawaii/400x250/laie-hawaii-temple-775369-wallpaper.jpg",
-  },
+  
 ];
 
-// ---- DOM references ----
 const cardsContainer = document.querySelector("#temple-cards");
 const filterHeading = document.querySelector("#filter-heading");
 
@@ -103,9 +69,8 @@ const filterLinks = document.querySelectorAll(".navigation a[data-filter]");
 const nav = document.querySelector("nav");
 const hambutton = document.querySelector("#menu");
 
-// ---- Helpers ----
 function getDedicatedYear(dedicatedString) {
-  // expected format: "YYYY, Month, D"
+
   const yearPart = dedicatedString.split(",")[0].trim();
   const year = Number.parseInt(yearPart, 10);
   return Number.isNaN(year) ? 0 : year;
