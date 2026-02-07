@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="A responsive temple photo album with filtering and lazy-loaded images."
+    />
+    <title>Filtered Temples</title>
+
+    <link rel="stylesheet" href="filtered-temples.css" />
+    <script src="filtered-temples.js" defer></script>
+  </head>
+
+  <body>
+    <a class="skip-link" href="#main">Skip to main content</a>
+
+    <header class="site-header">
+      <div class="brand">
+        <h1>Filtered Temples</h1>
+        <p class="tagline">Temple photo album with interactive filters</p>
+      </div>
+
+      <nav class="filters" aria-label="Temple filters">
+        <button type="button" class="filter-btn is-active" data-filter="home">
+          Home
+        </button>
+        <button type="button" class="filter-btn" data-filter="old">Old</button>
+        <button type="button" class="filter-btn" data-filter="new">New</button>
+        <button type="button" class="filter-btn" data-filter="large">
+          Large
+        </button>
+        <button type="button" class="filter-btn" data-filter="small">
+          Small
+        </button>
+      </nav>
+    </header>
+
+    <main id="main" class="site-main">
+      <h2 class="visually-hidden">Temple Cards</h2>
+
+      <section
+        id="temple-cards"
+        class="cards"
+        aria-live="polite"
+        aria-label="Temple cards"
+      ></section>
+    </main>
+
+    <footer class="site-footer">
+      <p>
+        &copy; <span id="currentyear"></span>
+        <span aria-hidden="true">•</span>
+        <span class="footer-name">Your Name</span>
+        <span aria-hidden="true">•</span>
+        WDD 131
+      </p>
+      <p id="lastModified"></p>
+    </footer>
+  </body>
+</html>
