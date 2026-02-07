@@ -1,62 +1,50 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta
-      name="description"
-      content="A responsive temple photo album with filtering and lazy-loaded images."
-    />
-    <title>Filtered Temples</title>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link rel="stylesheet" href="filtered-temples.css" />
-    <script src="filtered-temples.js" defer></script>
-  </head>
+  <title>Filtered Temples - Charlie Sparrow</title>
+  <meta name="description" content="A responsive gallery of temples with filtering and lazy-loaded images (WDD 131)." />
+  <meta name="author" content="Charlie Sparrow">
 
-  <body>
-    <a class="skip-link" href="#main">Skip to main content</a>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;400&display=swap" rel="stylesheet">
 
-    <header class="site-header">
-      <div class="brand">
-        <h1>Filtered Temples</h1>
-        <p class="tagline">Temple photo album with interactive filters</p>
-      </div>
+  <link rel="stylesheet" href="styles/filtered-temples.css">
+  <link rel="stylesheet" href="styles/temples-large.css" media="(min-width: 640px)">
 
-      <nav class="filters" aria-label="Temple filters">
-        <button type="button" class="filter-btn is-active" data-filter="home">
-          Home
-        </button>
-        <button type="button" class="filter-btn" data-filter="old">Old</button>
-        <button type="button" class="filter-btn" data-filter="new">New</button>
-        <button type="button" class="filter-btn" data-filter="large">
-          Large
-        </button>
-        <button type="button" class="filter-btn" data-filter="small">
-          Small
-        </button>
-      </nav>
-    </header>
+  <script src="scripts/filtered-temples.js" defer></script>
+</head>
+<body>
+  <header>
+    <h1>Temple Album</h1>
 
-    <main id="main" class="site-main">
-      <h2 class="visually-hidden">Temple Cards</h2>
+    <!-- Keep the same hamburger pattern you already use, but give it an accessible label -->
+    <a id="menu" href="#" aria-label="Open navigation menu" aria-expanded="false"></a>
 
-      <section
-        id="temple-cards"
-        class="cards"
-        aria-live="polite"
-        aria-label="Temple cards"
-      ></section>
-    </main>
+    <nav>
+      <ul class="navigation">
+        <li><a href="#" data-filter="home" class="active">Home</a></li>
+        <li><a href="#" data-filter="old">Old</a></li>
+        <li><a href="#" data-filter="new">New</a></li>
+        <li><a href="#" data-filter="large">Large</a></li>
+        <li><a href="#" data-filter="small">Small</a></li>
+      </ul>
+    </nav>
+  </header>
 
-    <footer class="site-footer">
-      <p>
-        &copy; <span id="currentyear"></span>
-        <span aria-hidden="true">•</span>
-        <span class="footer-name">Charlie Sparrow</span>
-        <span aria-hidden="true">•</span>
-        WDD 131
-      </p>
-      <p id="lastModified"></p>
-    </footer>
-  </body>
+  <main>
+    <h2 id="filter-heading">Home of the Lord</h2>
+
+    <!-- IMPORTANT: This replaces all the hard-coded <figure> elements from temples.html -->
+    <div class="gallery" id="temple-cards"></div>
+  </main>
+
+  <footer>
+    <p>&copy; <span id="currentyear"></span> | Charlie Sparrow | Utah</p>
+    <p id="lastModified"></p>
+  </footer>
+</body>
 </html>

@@ -1,184 +1,128 @@
 :root {
-  --bg: #ffffff;
-  --text: #1b1b1b;
-  --muted: #4a4a4a;
-  --border: #d0d7de;
-
-  --primary: #1f4b99;
-  --primary-strong: #16366d;
-  --surface: #f6f8fb;
-
-  --radius: 14px;
-  --shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
-}
-
-*,
-*::before,
-*::after {
-  box-sizing: border-box;
+    --primary-color: #0047AB;
+    --secondary-color: #f0f0f0;
+    --accent-color: #FFD700;
+    --font-heading: 'Roboto', sans-serif;
 }
 
 body {
-  margin: 0;
-  font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
-  background: var(--bg);
-  color: var(--text);
-  line-height: 1.5;
+    font-family: var(--font-heading);
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-.skip-link {
-  position: absolute;
-  left: -999px;
-  top: 0;
-  padding: 0.75rem 1rem;
-  background: var(--primary);
-  color: #fff;
-  border-radius: 0 0 var(--radius) var(--radius);
-  z-index: 1000;
-}
-.skip-link:focus {
-  left: 0.75rem;
-  top: 0.75rem;
-  outline: 3px solid #000;
-  outline-offset: 3px;
+header {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
-.site-header {
-  padding: 1.25rem 1rem 1rem;
-  border-bottom: 1px solid var(--border);
-  background: #fff;
+#menu {
+    font-size: 2rem;
+    border: 0;
+    background: none;
+    color: #fff;
+    cursor: pointer;
+    text-decoration: none;
 }
 
-.brand {
-  max-width: 1100px;
-  margin: 0 auto 0.75rem;
+#menu::before {
+    content: "☰";
 }
 
-.brand h1 {
-  margin: 0;
-  font-size: clamp(1.6rem, 2.8vw, 2.25rem);
+#menu.open::before {
+    content: "❎";
 }
 
-.tagline {
-  margin: 0.25rem 0 0;
-  color: var(--muted);
+nav {
+    display: none;
 }
 
-.filters {
-  max-width: 1100px;
-  margin: 0 auto;
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.5rem;
+nav.show {
+    display: block;
+    width: 100%;
 }
 
-.filter-btn {
-  appearance: none;
-  border: 1px solid var(--primary);
-  background: var(--primary);
-  color: #fff;
-  padding: 0.55rem 0.9rem;
-  border-radius: 999px;
-  font-weight: 600;
-  cursor: pointer;
+.navigation {
+    list-style: none;
+    padding: 0;
+    text-align: center;
 }
 
-.filter-btn:hover {
-  background: var(--primary-strong);
-  border-color: var(--primary-strong);
+.navigation li a {
+    display: block;
+    color: white;
+    padding: 1rem;
+    text-decoration: none;
 }
 
-.filter-btn:focus-visible {
-  outline: 3px solid #000;
-  outline-offset: 2px;
+.navigation li a:hover {
+    background-color: var(--accent-color);
+    color: black;
 }
 
-.filter-btn.is-active {
-  background: #fff;
-  color: var(--primary);
+main {
+    padding: 1rem;
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
 }
 
-.site-main {
-  max-width: 1100px;
-  margin: 0 auto;
-  padding: 1.25rem 1rem 2rem;
+.gallery {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
 }
 
-.cards {
-  display: grid;
-  gap: 1rem;
-  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+figure {
+    margin: 0;
+    border: 1px solid #ccc;
+    background-color: var(--secondary-color);
 }
 
-.card {
-  background: var(--surface);
-  border: 1px solid var(--border);
-  border-radius: var(--radius);
-  box-shadow: var(--shadow);
-  overflow: hidden;
-  display: grid;
-  grid-template-rows: auto 1fr;
+figure img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
 }
 
-.card img {
-  width: 100%;
-  height: auto;
-  display: block;
-  aspect-ratio: 16 / 10;
-  object-fit: cover;
-  background: #e9eef5;
+figcaption {
+    padding: 10px;
 }
 
-.card-content {
-  padding: 0.9rem 0.9rem 1rem;
+footer {
+    background-color: var(--primary-color);
+    color: white;
+    text-align: center;
+    padding: 1rem;
+    margin-top: 2rem;
 }
 
-.card h3 {
-  margin: 0 0 0.5rem;
-  font-size: 1.1rem;
+
+/* ---- Filtered Temples additions ---- */
+.navigation a.active {
+  background-color: var(--accent-color);
+  color: black;
 }
 
-.meta {
-  margin: 0;
-  display: grid;
-  gap: 0.35rem;
-  color: var(--muted);
+/* Make the "temple card" details readable and consistent */
+.temple-card figcaption {
+  text-align: left;
 }
 
-.meta div {
-  display: grid;
-  grid-template-columns: 7.5rem 1fr;
-  gap: 0.5rem;
+.temple-card h3 {
+  margin: 0.25rem 0 0.5rem;
+  font-size: 1.05rem;
 }
 
-.meta dt {
+.temple-card p {
+  margin: 0.25rem 0;
+}
+
+.temple-card .label {
   font-weight: 700;
-  color: var(--text);
-}
-
-.meta dd {
-  margin: 0;
-}
-
-.site-footer {
-  border-top: 1px solid var(--border);
-  padding: 1rem;
-  text-align: center;
-  color: var(--muted);
-}
-
-.site-footer p {
-  margin: 0.3rem 0;
-}
-
-.visually-hidden {
-  position: absolute !important;
-  width: 1px !important;
-  height: 1px !important;
-  padding: 0 !important;
-  margin: -1px !important;
-  overflow: hidden !important;
-  clip: rect(0, 0, 0, 0) !important;
-  white-space: nowrap !important;
-  border: 0 !important;
 }
