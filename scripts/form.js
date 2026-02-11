@@ -1,5 +1,3 @@
-// WDD 131 - Week 05
-// Build Product Name <select> options from a JavaScript array.
 
 const products = [
   {
@@ -35,8 +33,8 @@ const products = [
 
   products.forEach((product) => {
     const option = document.createElement("option");
-    option.value = product.id; // rubric requirement: use id as the value
-    option.textContent = product.name; // display name
+    option.value = product.id; 
+    option.textContent = product.name; 
     select.appendChild(option);
   });
 })();

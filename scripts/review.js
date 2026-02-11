@@ -1,5 +1,3 @@
-// WDD 131 - Week 05
-// review.html: increment a localStorage counter and show a summary of the GET parameters.
 
 const products = [
   { id: "fc-1888", name: "flux capacitor", averagerating: 4.5 },
