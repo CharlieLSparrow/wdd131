@@ -1,16 +1,8 @@
-/* ----------------------------------------------------------
-   WDD 131 | Week 05 | Product Review Form
-   Visual style aligned with the High Ground Odyssey site plan:
-   - Cinematic teal + orange accents
-   - Montserrat headings + Merriweather body
-   - Warm "parchment" background inspired by Journey.jpg
-   ---------------------------------------------------------- */
-
 :root {
-  --color-dark: #0f1a22;      /* Deep slate (blue-black) */
-  --color-orange: #f08a24;    /* Cinematic orange */
-  --color-teal: #1c6f77;      /* Cinematic teal */
-  --color-paper: #f5f1e6;     /* Parchment */
+  --color-dark: #0f1a22;    
+  --color-orange: #f08a24; 
+  --color-teal: #1c6f77;     
+  --color-paper: #f5f1e6;    
   --color-white: #ffffff;
 
   --radius: 14px;
@@ -56,7 +48,6 @@ a:focus {
   margin-inline: auto;
 }
 
-/* Accessibility */
 .skip-link {
   position: absolute;
   left: -999px;
@@ -81,7 +72,6 @@ a:focus {
   outline-offset: 3px;
 }
 
-/* Header */
 .site-header {
   background: var(--color-dark);
   color: var(--color-paper);
@@ -140,7 +130,6 @@ a:focus {
   border-bottom-color: var(--color-orange);
 }
 
-/* Hero */
 .hero {
   position: relative;
   isolation: isolate;
@@ -205,7 +194,6 @@ h1 {
   );
 }
 
-/* Card */
 .card {
   background: rgba(255, 255, 255, 0.68);
   border: 1px solid rgba(15, 26, 34, 0.14);
@@ -231,7 +219,6 @@ h1 {
   font-weight: 700;
 }
 
-/* Form layout */
 .review-form {
   margin-top: 0.75rem;
 }
@@ -287,7 +274,6 @@ textarea:focus-visible {
   padding: 0 0.35rem;
 }
 
-/* Rating */
 .rating {
   display: inline-flex;
   flex-direction: row-reverse;
@@ -347,7 +333,6 @@ textarea:focus-visible {
   accent-color: var(--color-teal);
 }
 
-/* Actions */
 .field--actions {
   gap: 0.75rem;
 }
@@ -387,7 +372,6 @@ textarea:focus-visible {
   max-width: 70ch;
 }
 
-/* Confirmation page */
 .card--confirmation {
   margin-top: 2.25rem;
 }
@@ -455,7 +439,6 @@ textarea:focus-visible {
   margin-top: 1.25rem;
 }
 
-/* Footer */
 .site-footer {
   background: var(--color-dark);
   color: var(--color-paper);
@@ -467,7 +450,6 @@ textarea:focus-visible {
   max-width: 80ch;
 }
 
-/* Utilities */
 .sr-only {
   position: absolute;
   width: 1px;
