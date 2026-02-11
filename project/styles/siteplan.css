@@ -1,14 +1,10 @@
-/* ----------------------------------------------------------
-   High Ground Odyssey | WDD 131 Site Plan Styles
-   Palette inspired by Journey.jpg and the existing site branding.
-   Teal + orange accents for a cinematic adventure tone.
-   ---------------------------------------------------------- */
+
 
 :root {
-  --color-dark: #0f1a22;      /* Deep slate (blue-black) */
-  --color-orange: #f08a24;    /* Cinematic orange */
-  --color-teal: #1c6f77;      /* Cinematic teal (slightly more blue) */
-  --color-paper: #f5f1e6;     /* Parchment */
+  --color-dark: #0f1a22;     
+  --color-orange: #f08a24;    
+  --color-teal: #1c6f77;      
+  --color-paper: #f5f1e6;    
 
   --radius: 14px;
   --shadow: 0 10px 30px rgba(15, 26, 34, 0.16);
