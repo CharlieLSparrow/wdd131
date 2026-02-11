@@ -1,0 +1,149 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Product Review Form | High Ground Odyssey</title>
+  <meta name="description" content="Submit a product review with an accessible, responsive form. Built for WDD 131 Week 05.">
+
+  <!-- Fonts (match the High Ground Odyssey site plan) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400;700&family=Montserrat:wght@500;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="styles/form.css">
+
+  <script src="scripts/common.js" defer></script>
+  <script src="scripts/form.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip To Main Content</a>
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="form.html" aria-label="High Ground Odyssey">
+        <img class="brand-mark" src="images/logo-valknut-light.svg" alt="High Ground Odyssey mark">
+        <span class="brand-name">High Ground Odyssey</span>
+      </a>
+
+      <nav class="site-nav" aria-label="Primary">
+        <a aria-current="page" href="form.html">Review Form</a>
+        <a href="review.html">Confirmation</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="hero" aria-label="Hero">
+      <div class="container hero-inner">
+        <div class="hero-copy">
+          <p class="kicker">WDD 131 • Week 05</p>
+          <h1>Product Review Form</h1>
+          <p class="lede">A clean, cinematic form layout inspired by <em>Journey.jpg</em> and the High Ground Odyssey brand palette (teal + orange). Required fields are clearly marked for quick completion on mobile and desktop.</p>
+        </div>
+      </div>
+
+      <img
+        class="hero-image"
+        src="images/journey.jpg"
+        width="1536"
+        height="1017"
+        alt="Two travelers planning their route with a map and camera in warm sunset light">
+    </section>
+
+    <section class="container">
+      <div class="card">
+        <h2 class="card-title">Submit Your Review</h2>
+        <p class="helper">Fields marked with <span class="req" aria-hidden="true">*</span> are required.</p>
+
+        <form class="review-form" method="get" action="review.html">
+          <div class="form-grid">
+            <div class="field">
+              <label for="productName">Product Name <span class="req" aria-hidden="true">*</span></label>
+              <select id="productName" name="productName" required>
+                <option value="" disabled selected>Select a Product ...</option>
+                <!-- Options are injected by scripts/form.js -->
+              </select>
+            </div>
+
+            <fieldset class="field fieldset">
+              <legend>Overall Rating <span class="req" aria-hidden="true">*</span></legend>
+              <div class="rating" aria-label="Overall rating">
+                <input type="radio" id="rating5" name="rating" value="5" required>
+                <label for="rating5"><span class="sr-only">5 Stars</span><span aria-hidden="true">★</span></label>
+
+                <input type="radio" id="rating4" name="rating" value="4" required>
+                <label for="rating4"><span class="sr-only">4 Stars</span><span aria-hidden="true">★</span></label>
+
+                <input type="radio" id="rating3" name="rating" value="3" required>
+                <label for="rating3"><span class="sr-only">3 Stars</span><span aria-hidden="true">★</span></label>
+
+                <input type="radio" id="rating2" name="rating" value="2" required>
+                <label for="rating2"><span class="sr-only">2 Stars</span><span aria-hidden="true">★</span></label>
+
+                <input type="radio" id="rating1" name="rating" value="1" required>
+                <label for="rating1"><span class="sr-only">1 Star</span><span aria-hidden="true">★</span></label>
+              </div>
+            </fieldset>
+
+            <div class="field">
+              <label for="installDate">Date Of Installation <span class="req" aria-hidden="true">*</span></label>
+              <input id="installDate" name="installDate" type="date" required>
+            </div>
+
+            <fieldset class="field fieldset">
+              <legend>Useful Features</legend>
+              <div class="checks">
+                <label class="check" for="feature-1">
+                  <input id="feature-1" name="features" type="checkbox" value="durability">
+                  Durability
+                </label>
+
+                <label class="check" for="feature-2">
+                  <input id="feature-2" name="features" type="checkbox" value="easy-setup">
+                  Easy Setup
+                </label>
+
+                <label class="check" for="feature-3">
+                  <input id="feature-3" name="features" type="checkbox" value="comfort">
+                  Comfort
+                </label>
+
+                <label class="check" for="feature-4">
+                  <input id="feature-4" name="features" type="checkbox" value="performance">
+                  Performance
+                </label>
+              </div>
+            </fieldset>
+
+            <div class="field field--wide">
+              <label for="writtenReview">Written Review</label>
+              <textarea id="writtenReview" name="writtenReview" rows="5" placeholder="Optional: What worked well? What would you change?"></textarea>
+            </div>
+
+            <div class="field">
+              <label for="userName">Your Name</label>
+              <input id="userName" name="userName" type="text" autocomplete="name" placeholder="Optional">
+            </div>
+
+            <div class="field field--actions">
+              <input class="btn" type="submit" value="Submit Review">
+              <p class="microcopy">Submitting takes you to a confirmation page and increments a review counter using localStorage.</p>
+            </div>
+          </div>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>
+        &copy; <span id="currentyear"></span> High Ground Odyssey • WDD 131
+        <br>
+        Last Modification: <span id="lastModified"></span>
+      </p>
+    </div>
+  </footer>
+</body>
+</html>
