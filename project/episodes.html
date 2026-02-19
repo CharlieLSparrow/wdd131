@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="en-US">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Browse and filter episodes. Demonstrates arrays, template literals, DOM manipulation, events, and localStorage.">
+  <meta name="author" content="WDD 131 Student">
+  <title>High Ground Odyssey | Episodes</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700;800&family=Merriweather:wght@300;400;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="styles/base.css">
+  <script src="scripts/main.js" defer></script>
+</head>
+
+<body data-page="episodes">
+  <a class="skip-link" href="#main">Skip to main content</a>
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="index.html" aria-label="High Ground Odyssey home">
+        <img class="brand-mark" src="images/logo-valknut-light.svg" alt="" aria-hidden="true">
+        <div>
+          <span class="brand-name">High Ground Odyssey</span>
+          <span class="brand-sub">Leadership • legacy • the climb</span>
+        </div>
+      </a>
+
+      <nav class="site-nav" aria-label="Primary">
+        <a href="index.html">Home</a>
+        <a href="episodes.html">Episodes</a>
+        <a href="contact.html">Contact</a>
+        <span class="pill" aria-label="Saved episodes">
+          Saved: <strong><span id="saved-count">0</span></strong>
+        </span>
+      </nav>
+    </div>
+  </header>
+
+  <div id="toast" class="container notice" hidden></div>
+
+  <main id="main" class="container">
+  <section class="card">
+    <div class="card-pad">
+      <span class="kicker">Episodes</span>
+      <h1>Browse Episodes</h1>
+      <p class="lede">
+        Filter and search episodes. This page demonstrates DOM interaction, event listeners,
+        conditional branching, arrays + array methods, and template literal rendering.
+      </p>
+
+      <div class="toolbar" aria-label="Episode filters">
+        <label style="max-width:360px">
+          Search
+          <input id="search" type="text" name="search" autocomplete="off" placeholder="Search title or description">
+        </label>
+
+        <label style="max-width:240px">
+          Tag
+          <select id="tag" name="tag">
+            <option value="all">All</option>
+            <option value="legacy">legacy</option>
+            <option value="resilience">resilience</option>
+            <option value="identity">identity</option>
+            <option value="story">story</option>
+            <option value="meaning">meaning</option>
+            <option value="humor">humor</option>
+            <option value="teamwork">teamwork</option>
+            <option value="practice">practice</option>
+            <option value="purpose">purpose</option>
+            <option value="strategy">strategy</option>
+            <option value="autonomy">autonomy</option>
+          </select>
+        </label>
+      </div>
+    </div>
+  </section>
+
+  <section style="margin-top:1rem">
+    <div id="episode-list" class="grid"></div>
+  </section>
+
+  <section class="card" style="margin-top:1rem">
+    <div class="card-pad">
+      <h2>Reading-friendly theme</h2>
+      <p class="meta">
+        The palette and typography are pulled from the site plan: cinematic teal/orange accents with a parchment reading surface.
+      </p>
+      <figure class="hero-figure" style="margin:0">
+        <img src="images/journey-800.webp" alt="Journey hero image shown again below fold" loading="lazy">
+      </figure>
+    </div>
+  </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p class="small">© <span id="year"></span> High Ground Odyssey • W06 project example</p>
+      <p class="small">Last Modified: <span id="lastModified"></span></p>
+      <p class="small">Hero art: Journey.jpg (uploaded reference asset)</p>
+    </div>
+  </footer>
+</body>
+</html>

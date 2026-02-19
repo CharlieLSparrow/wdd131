@@ -1,0 +1,127 @@
+<!doctype html>
+<html lang="en-US">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="High Ground Odyssey home page: latest episodes, saved favorites, and a leadership storytelling focus.">
+  <meta name="author" content="WDD 131 Student">
+  <title>High Ground Odyssey | Home</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700;800&family=Merriweather:wght@300;400;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="styles/base.css">
+  <script src="scripts/main.js" defer></script>
+</head>
+
+<body data-page="home">
+  <a class="skip-link" href="#main">Skip to main content</a>
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="index.html" aria-label="High Ground Odyssey home">
+        <img class="brand-mark" src="images/logo-valknut-light.svg" alt="" aria-hidden="true">
+        <div>
+          <span class="brand-name">High Ground Odyssey</span>
+          <span class="brand-sub">Leadership • legacy • the climb</span>
+        </div>
+      </a>
+
+      <nav class="site-nav" aria-label="Primary">
+        <a href="index.html">Home</a>
+        <a href="episodes.html">Episodes</a>
+        <a href="contact.html">Contact</a>
+        <span class="pill" aria-label="Saved episodes">
+          Saved: <strong><span id="saved-count">0</span></strong>
+        </span>
+      </nav>
+    </div>
+  </header>
+
+  <div id="toast" class="container notice" hidden></div>
+
+  <main id="main" class="container">
+  <section class="hero">
+    <figure class="hero-figure">
+      <img
+        src="images/journey-800.webp"
+        srcset="images/journey-800.webp 800w, images/journey-1400.webp 1400w"
+        sizes="(min-width: 860px) 60vw, 92vw"
+        alt="Illustration of two hikers at sunset; one holds a camera and the other holds a map and points toward the horizon.">
+    </figure>
+
+    <div class="hero-text">
+      <span class="kicker">W06 Project • Brand-Aligned</span>
+      <h1>High Ground Odyssey</h1>
+      <p class="lede">
+        A leadership storytelling project built around legacy, resilience, and practical lessons from real life.
+        This demo site is structured to meet the W06 rubric while staying true to the cinematic teal-and-orange style.
+      </p>
+
+      <div class="actions">
+        <a class="button button-primary" href="episodes.html">Browse episodes</a>
+        <a class="button" href="contact.html#contact">Newsletter / contact</a>
+      </div>
+
+      <p class="small" style="margin-top:1rem">
+        Visits (localStorage): <strong><span id="visits">0</span></strong><br>
+        <span id="visit-message"></span>
+      </p>
+    </div>
+  </section>
+
+  <section class="card" style="margin-top:1.25rem">
+    <div class="card-pad">
+      <h2>Latest Episode</h2>
+      <p class="meta">Rendered from an array of episode objects using template literals.</p>
+      <div id="latest-episode" class="grid"></div>
+    </div>
+  </section>
+
+  <section class="grid two-col" style="margin-top:1rem">
+    <section class="card">
+      <div class="card-pad">
+        <h2>Episode Preview</h2>
+        <p class="meta">Top 3 most recent episodes. Use “Save” to store favorites in localStorage.</p>
+        <div id="episode-preview" class="grid"></div>
+      </div>
+    </section>
+
+    <section class="card">
+      <div class="card-pad">
+        <h2>What this site demonstrates</h2>
+        <ul>
+          <li>Semantic HTML + accessibility basics (skip link, landmarks, meaningful copy)</li>
+          <li>Responsive CSS with design principles (contrast, whitespace, alignment, repetition)</li>
+          <li>JavaScript: functions, DOM manipulation, events, arrays/objects, conditionals</li>
+          <li>localStorage: visits, saved episodes, preferred name</li>
+        </ul>
+      </div>
+    </section>
+  </section>
+
+  <section class="card" style="margin-top:1rem">
+    <div class="card-pad">
+      <h2>Below-the-fold image (lazy loaded)</h2>
+      <p class="meta">This image sits after content and uses native lazy loading to satisfy the rubric.</p>
+      <figure class="hero-figure" style="margin:0">
+        <img
+          src="images/journey-800.webp"
+          alt="Same Journey hero image repeated below the fold for lazy loading demo"
+          loading="lazy">
+      </figure>
+    </div>
+  </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p class="small">© <span id="year"></span> High Ground Odyssey • W06 project example</p>
+      <p class="small">Last Modified: <span id="lastModified"></span></p>
+      <p class="small">Hero art: Journey.jpg (uploaded reference asset)</p>
+    </div>
+  </footer>
+</body>
+</html>

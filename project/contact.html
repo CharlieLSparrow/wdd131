@@ -1,0 +1,119 @@
+<!doctype html>
+<html lang="en-US">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Contact and newsletter form with required fields and JavaScript handling.">
+  <meta name="author" content="WDD 131 Student">
+  <title>High Ground Odyssey | Contact</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700;800&family=Merriweather:wght@300;400;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="styles/base.css">
+  <script src="scripts/main.js" defer></script>
+</head>
+
+<body data-page="contact">
+  <a class="skip-link" href="#main">Skip to main content</a>
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="index.html" aria-label="High Ground Odyssey home">
+        <img class="brand-mark" src="images/logo-valknut-light.svg" alt="" aria-hidden="true">
+        <div>
+          <span class="brand-name">High Ground Odyssey</span>
+          <span class="brand-sub">Leadership • legacy • the climb</span>
+        </div>
+      </a>
+
+      <nav class="site-nav" aria-label="Primary">
+        <a href="index.html">Home</a>
+        <a href="episodes.html">Episodes</a>
+        <a href="contact.html">Contact</a>
+        <span class="pill" aria-label="Saved episodes">
+          Saved: <strong><span id="saved-count">0</span></strong>
+        </span>
+      </nav>
+    </div>
+  </header>
+
+  <div id="toast" class="container notice" hidden></div>
+
+  <main id="main" class="container">
+  <section class="hero">
+    <figure class="hero-figure">
+      <img
+        src="images/journey-800.webp"
+        alt="High Ground Odyssey hero illustration used as a soft background reference"
+        loading="lazy">
+    </figure>
+
+    <div class="hero-text">
+      <span class="kicker">Contact</span>
+      <h1>Newsletter & Questions</h1>
+      <p class="lede">
+        This form follows the course standards: labels, required fields, helpful input types, and accessible feedback.
+        The submit handler shows DOM manipulation, events, conditional branching, and localStorage.
+      </p>
+    </div>
+  </section>
+
+  <section id="contact" class="card" style="margin-top:1rem">
+    <div class="card-pad">
+      <h2>Contact Form</h2>
+
+      <form id="contact-form" class="form" novalidate>
+        <label>
+          Name
+          <input type="text" name="name" autocomplete="name" required>
+          <p class="help">Required. Saved in localStorage as a convenience.</p>
+        </label>
+
+        <label>
+          Email
+          <input type="email" name="email" autocomplete="email" required>
+          <p class="help">Required. Use a real email format.</p>
+        </label>
+
+        <label>
+          Topic
+          <select name="topic" required>
+            <option value="general">General</option>
+            <option value="episode">Episode question</option>
+            <option value="coaching">Coaching interest</option>
+            <option value="other">Other</option>
+          </select>
+          <p class="help">Required. If you pick “Other”, include 20+ characters in your message.</p>
+        </label>
+
+        <label>
+          Message
+          <textarea name="message" required></textarea>
+          <p class="help">Required.</p>
+        </label>
+
+        <div class="actions">
+          <button class="button button-primary" type="submit">Send Message</button>
+          <a class="button" href="episodes.html">Browse episodes</a>
+        </div>
+
+        <p class="small">This demo does not send email; it displays your submission below.</p>
+      </form>
+
+      <div id="form-output" style="margin-top:1rem"></div>
+    </div>
+  </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p class="small">© <span id="year"></span> High Ground Odyssey • W06 project example</p>
+      <p class="small">Last Modified: <span id="lastModified"></span></p>
+      <p class="small">Hero art: Journey.jpg (uploaded reference asset)</p>
+    </div>
+  </footer>
+</body>
+</html>
